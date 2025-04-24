@@ -2,6 +2,10 @@ local function map_n(left, right, desc)
   desc = desc or ''
   vim.keymap.set('n', left, right, { desc = desc })
 end
+local function map_i(left, right, desc)
+  desc = desc or ''
+  vim.keymap.set('i', left, right, { desc = desc })
+end
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -9,6 +13,8 @@ end
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map_n('<Esc>', '<cmd>nohlsearch<CR>')
+map_i('jk', '<Esc>')
+map_i('kj', '<Esc>')
 
 -- Diagnostic keymaps
 map_n('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message')
