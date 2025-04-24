@@ -1,5 +1,3 @@
-return {}
---[[
 April 23, 2025 - Hopefully I won't need this document for long.
 
 Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
@@ -42,4 +40,3 @@ For additional information with loading, sourcing and examples see `:help lazy.n
 Or use telescope!
 In normal mode type `<space>sh` then write `lazy.nvim-plugin`
 you can continue same window with `<space>sr` which resumes last telescope search
---]]
