@@ -64,3 +64,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+map_n('-', '<CMD>Oil<CR>', 'Open parent directory')
