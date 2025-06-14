@@ -1,15 +1,29 @@
 -- See `:help gitsigns` to understand what the configuration keys do
 return {
-    { -- Adds git related signs to the gutter, as well as utilities for managing changes
-        "lewis6991/gitsigns.nvim",
-        opts = {
-            signs = {
-                add = { text = "+" },
-                change = { text = "~" },
-                delete = { text = "_" },
-                topdelete = { text = "‾" },
-                changedelete = { text = "~" },
-            },
+    -- Adds git related signs to the gutter, as well as utilities for managing changes
+    "lewis6991/gitsigns.nvim",
+    opts = {
+        signs = {
+            add = { text = "+" },
+            change = { text = "~" },
+            delete = { text = "_" },
+            topdelete = { text = "‾" },
+            changedelete = { text = "~" },
         },
     },
+    config = function()
+        require("gitsigns").setup()
+        vim.keymap.set(
+            "n",
+            "<leader>gh",
+            ":Gitsigns preview_hunk<CR>",
+            { noremap = true, desc = "Gitsigns: preview [h]unk" }
+        )
+        vim.keymap.set(
+            "n",
+            "<leader>gi",
+            ":Gitsigns preview_hunk_inline<CR>",
+            { noremap = true, desc = "Gitsigns: preview hunk [i]nline" }
+        )
+    end,
 }
