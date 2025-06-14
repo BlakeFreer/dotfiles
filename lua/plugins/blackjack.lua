@@ -1,3 +1,3 @@
 return {
-  'alanfortlink/blackjack.nvim',
+    "alanfortlink/blackjack.nvim",
 }
