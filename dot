@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PWD=$(eval pwd)
+
+ln -sf $PWD/nvim ~/.config/nvim
+ln -sf $PWD/tmux.conf ~/.tmux.conf
