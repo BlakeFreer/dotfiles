@@ -66,3 +66,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 map_n("-", "<CMD>Oil<CR>", "Open parent directory")
+
+vim.filetype.add({
+    extension = {
+        tpp = "cpp",
+    },
+})
+
+map_n("<leader>ca", vim.lsp.buf.code_action, "Code Action")

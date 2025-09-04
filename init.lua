@@ -5,6 +5,7 @@ vim.g.maplocalleader = " "
 
 require("options")
 require("keymap")
+require("ftype")
 require("config.lazy")
 
 -- The line beneath this is called `modeline`. See `:help modeline`

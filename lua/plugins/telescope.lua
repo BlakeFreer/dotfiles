@@ -99,5 +99,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
         vim.keymap.set("n", "<leader>sn", function()
             builtin.find_files({ cwd = vim.fn.stdpath("config") })
         end, { desc = "[S]earch [N]eovim files" })
+
+        local ignore_patterns = {
+            "target/*", -- rust build files
+            "build/*", -- CMake build files
+        }
+
+        require("telescope.config").set_defaults({ file_ignore_patterns = ignore_patterns })
     end,
 }

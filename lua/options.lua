@@ -1,3 +1,5 @@
+local o = vim.o
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -68,3 +70,9 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
+
+-- tabs
+o.expandtab = true
+o.shiftwidth = 4
+o.tabstop = 4
+o.smartindent = true

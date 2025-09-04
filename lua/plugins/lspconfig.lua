@@ -10,7 +10,7 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
 
         -- Useful status updates for LSP.
-        { "j-hui/fidget.nvim", opts = {} },
+        { "j-hui/fidget.nvim",       opts = {} },
 
         -- Allows extra capabilities provided by blink.cmp
         "saghen/blink.cmp",
@@ -158,7 +158,7 @@ return {
                 end
                 vim.api.nvim_create_autocmd("BufWritePre", {
                     callback = function()
-                        vim.lsp.buf.format({ async = true })
+                        vim.lsp.buf.format({ async = false })
                     end,
                 })
             end,
