@@ -57,20 +57,14 @@ map_n("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanking (copying) text",
-    group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-})
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--     desc = "Highlight when yanking (copying) text",
+--     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+--     callback = function()
+--         vim.highlight.on_yank()
+--     end,
+-- })
 
 map_n("-", "<CMD>Oil<CR>", "Open parent directory")
-
-vim.filetype.add({
-    extension = {
-        tpp = "cpp",
-    },
-})
 
 map_n("<leader>ca", vim.lsp.buf.code_action, "Code Action")
