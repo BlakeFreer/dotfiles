@@ -32,6 +32,7 @@ return { -- Autoformat
             lua = { "stylua" },
             rust = { "rust-analyzer" },
             css = { "prettier" },
+            tex = { "tex-fmt" },
             -- Conform can also run multiple formatters sequentially
             -- python = { "isort", "black" },
             --

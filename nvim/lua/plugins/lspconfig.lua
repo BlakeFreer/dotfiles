@@ -10,7 +10,7 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
 
         -- Useful status updates for LSP.
-        { "j-hui/fidget.nvim", opts = {} },
+        { "j-hui/fidget.nvim",       opts = {} },
 
         -- Allows extra capabilities provided by blink.cmp
         "saghen/blink.cmp",
@@ -197,7 +197,9 @@ return {
         --  By default, Neovim doesn't support everything that is in the LSP specification.
         --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
         --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-        local capabilities = require("blink.cmp").get_lsp_capabilities()
+        local capabilities = require("blink.cmp").get_lsp_capabilities({
+            textDocument = { completion = { completionItem = { snippetSupport = false } } },
+        })
 
         -- Enable the following language servers
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -261,6 +263,8 @@ return {
         -- You can add other tools here that you want Mason to install
         -- for you, so that they are available from within Neovim.
         local ensure_installed = vim.tbl_keys(servers or {})
+
+        -- formatters must also be listed in `conform.lua`
         vim.list_extend(ensure_installed, {
             "stylua", -- Used to format Lua code
             "asm-lsp",
@@ -275,7 +279,8 @@ return {
             "prettier",
             "pyright",
             "rust-analyzer",
-            "stylua",
+            "tex-fmt",
+            "vale", -- text prose
         })
         require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

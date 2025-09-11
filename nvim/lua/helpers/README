@@ -1,0 +1,3 @@
+Do not load this file for neovim config.
+
+It should only be used by `nvim/snippets` files.
