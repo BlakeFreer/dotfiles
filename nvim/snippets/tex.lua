@@ -6,8 +6,14 @@ return {
     s({ trig = ";b", snippetType = "autosnippet" }, { t("\\beta") }),
     s({ trig = ";g", snippetType = "autosnippet" }, { t("\\gamma") }),
 
-    s({ trig = "tt", dscr = "Expands 'tt' into '\texttt{}'" }, fmta("\\texttt{<>}", { i(1) })),
+    s({ trig = "tt", dscr = "\\text{}" }, fmta("\\text{<>}", { i(1) })),
     s({ trig = "([^%a])ff", dscr = "\\frac" }, fmta("\\frac{<>}{<>}", { i(1), i(2) })),
+    s(
+        { trig = "([%a%)%]%}])00", dscr = "Subscript", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+        fmta("<>_{<>}", { f(function(_, snip)
+            return snip.captures[1]
+        end), i(1) })
+    ),
 
     s(
         { trig = "env", snippetType = "autosnippet" },

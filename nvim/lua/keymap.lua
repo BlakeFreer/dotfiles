@@ -13,8 +13,8 @@ end
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map_n("<Esc>", "<cmd>nohlsearch<CR>")
-map_i("jk", "<Esc>")
-map_i("kj", "<Esc>")
+-- map_i("jk", "<Esc>") -- using CAPSLOCK now with caps2esc
+-- map_i("kj", "<Esc>")
 
 -- Diagnostic keymaps
 map_n("[d", vim.diagnostic.goto_prev, "Go to previous [D]iagnostic message")
@@ -70,7 +70,7 @@ map_n("-", "<CMD>Oil<CR>", "Open parent directory")
 map_n("<leader>ca", vim.lsp.buf.code_action, "Code Action")
 
 vim.keymap.set(
-    { "i", "n" },
+    { "n" },
     "<leader>L",
     '<Cmd>lua require("luasnip.loaders.from_lua").load({paths="~/.config/nvims/snippets"})<CR>',
     { desc = "Reload snippets" }
