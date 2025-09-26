@@ -10,7 +10,7 @@ return {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
 
         -- Useful status updates for LSP.
-        { "j-hui/fidget.nvim",       opts = {} },
+        { "j-hui/fidget.nvim", opts = {} },
 
         -- Allows extra capabilities provided by blink.cmp
         "saghen/blink.cmp",
@@ -272,7 +272,9 @@ return {
             "clangd",
             "cmake-language-server",
             "delve",
-            "julia-lsp",
+            -- julialsp doesn't work with Mason
+            -- https://discourse.julialang.org/t/neovim-languageserver-jl-crashing-again/130273/2
+            -- "julia-lsp",
             "lua-language-server",
             "markdownlint",
             "prettier",
@@ -296,5 +298,8 @@ return {
                 end,
             },
         })
+
+        -- https://discourse.julialang.org/t/neovim-languageserver-jl-crashing-again/130273/3
+        vim.lsp.enable("julials")
     end,
 }
