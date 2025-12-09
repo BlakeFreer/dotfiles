@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 
-PWD=$(eval pwd)
-
-ln -sf $PWD/nvim ~/.config/
-ln -sf $PWD/tmux.conf ~/.tmux.conf
-
-mkdir -p ~/.config/zathura/
-ln -sf $PWD/zathura/zathurarc ~/.config/zathura/zathurarc
-
-mkdir -p ~/.config/latexmk
-ln -sf $PWD/latexmk/latexmkrc ~/.config/latexmk/latexmkrc
-
-mkdir -p ~/.config/tex-fmt
-ln -sf $PWD/tex-fmt/tex-fmt.toml ~/.config/tex-fmt/tex-fmt.toml
+ln -sf $(pwd)/nvim ~/.config/
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
+ln -sf $(pwd)/zathura ~/.config/
+ln -sf $(pwd)/latexmk ~/.config/
+ln -sf $(pwd)/tex-fmt ~/.config/
+ln -sf $(pwd)/git/gitconfig ~/.gitconfig-public
