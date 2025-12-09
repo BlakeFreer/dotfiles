@@ -16,7 +16,7 @@ return {
     ),
 
     s(
-        { trig = "env", snippetType = "autosnippet" },
+        { trig = "benv", snippetType = "autosnippet", wordTrig = true },
         fmta(
             [[
         \begin{<>}
