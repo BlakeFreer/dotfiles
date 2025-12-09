@@ -222,7 +222,13 @@ return {
             -- But for many setups, the LSP (`ts_ls`) will work just fine
             -- ts_ls = {},
             --
-
+            ltex_plus = {
+                settings = {
+                    ltex = {
+                        language = "en-GB",
+                    },
+                },
+            },
             lua_ls = {
                 -- cmd = { ... },
                 -- filetypes = { ... },
@@ -275,6 +281,7 @@ return {
             -- julialsp doesn't work with Mason
             -- https://discourse.julialang.org/t/neovim-languageserver-jl-crashing-again/130273/2
             -- "julia-lsp",
+            "ltex-ls-plus",
             "lua-language-server",
             "markdownlint",
             "prettier",
