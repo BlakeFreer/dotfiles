@@ -1,0 +1,24 @@
+# This gitconfig is not complete. It excludes personal information.
+# It should be manually included in the main `~/.gitconfig`
+# [include]
+#	path = ~/.gitconfig-public
+
+[core]
+	editor = nvim
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+
+[merge]
+	conflictStyle = zdiff3
+
+[sequence]
+	editor = nvim
+
+[init]
+	defaultBranch = main
+
