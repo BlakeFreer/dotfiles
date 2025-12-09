@@ -4,7 +4,7 @@ return {
     ---@type oil.SetupOpts
     opts = {
         view_options = {
-            show_hidden = true,
+            show_hidden = false,
             is_always_hidden = function(name, _bufnr)
                 if name == ".git" then
                     return true
