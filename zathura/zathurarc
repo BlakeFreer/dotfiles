@@ -1,2 +1,7 @@
 set selection-clipboard clipboard
 set database sqlite
+
+set recolor
+set recolor-lightcolor \#1a1b26
+set recolor-keephue
+set default-fg \#c0caf5
