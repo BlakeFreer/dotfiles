@@ -12,6 +12,9 @@
 
 [delta]
 	navigate = true
+	side-by-side = false
+	hyperlinks = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}" # this isn't working
 
 [merge]
 	conflictStyle = zdiff3
