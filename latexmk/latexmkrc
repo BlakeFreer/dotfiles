@@ -1,3 +1,4 @@
 $out_dir = 'out';
 $aux_dir = 'out';
-$pdflatex = "pdflatex -file-line-error -bibtex -halt-on-error -interaction=nonstopmode -synctex=1 -shell-escape";
+$pdf_mode = 1;
+$pdflatex = "pdflatex -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1 -shell-escape";

@@ -6,6 +6,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gfp="git fetch --prune"
+alias gca="git commit --amend"
 
 # Go to the root of a git directory
 function cdi() {
@@ -13,5 +14,9 @@ function cdi() {
 }
 
 function rg() {
-	/usr/bin/rg $1 --json | delta
+	/usr/bin/rg "$@" --json | delta
 }
+
+# hledger
+alias hl="hledger"
+alias hla="hledger add"

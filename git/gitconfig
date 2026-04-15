@@ -12,7 +12,7 @@
 
 [delta]
 	navigate = true
-	side-by-side = false
+	# side-by-side = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "vscode://file/{path}:{line}" # this isn't working
 
