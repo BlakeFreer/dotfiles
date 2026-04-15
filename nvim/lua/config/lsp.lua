@@ -17,22 +17,24 @@ local servers = {
                 analysis = {
                     typeCheckingMode = "basic",
                 },
+                disableOrganizeImports = true,
             },
         },
+    },
+    ruff = {
+        -- this isn't working. want to disable "remove unused imports"
+        -- init_options = {
+        --     settings = {
+        --         lint = {
+        --             unfixable = { "F401" },
+        --         },
+        --     },
+        -- },
     },
     gopls = {},
 
     -- rust-analyzer is managed by plugins/rustaceanvim.lua
-    -- rust_analyzer = {
-    --     settings = {
-    --         ["rust-analyzer"] = {
-    --             checkOnSave = true,
-    --             check = {
-    --                 command = "clippy",
-    --             },
-    --         },
-    --     },
-    -- },
+    -- Don't inlcude it here as it will spawn two servers
     ltex_plus = {
         settings = {
             ltex = {
