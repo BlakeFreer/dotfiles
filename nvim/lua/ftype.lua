@@ -2,6 +2,6 @@
 
 vim.filetype.add({
     extension = {
-        tpp = "cpp",
+        tpp = "cpp", -- cpp template file
     },
 })

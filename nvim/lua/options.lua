@@ -1,6 +1,5 @@
 local o = vim.o
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
@@ -64,7 +63,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -76,4 +75,3 @@ o.expandtab = true
 o.shiftwidth = 4
 o.tabstop = 4
 o.smartindent = true
-
