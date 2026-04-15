@@ -42,3 +42,17 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
         return "<C-E>"
     end
 end, { expr = true, silent = true })
+
+local function open_externally(pattern, program)
+    vim.api.nvim_create_autocmd("BufReadCmd", {
+        pattern = pattern,
+        callback = function()
+            local filename = vim.fn.shellescape(vim.api.nvim_buf_get_name(0))
+            vim.cmd("silent !" .. program .. " " .. filename .. " &")
+            vim.cmd("let tobedeleted = bufnr('%') | b# | exe \"bd! \" . tobedeleted")
+        end,
+    })
+end
+
+open_externally("*.pdf", "zathura")
+open_externally({ "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" }, "viewnior")
