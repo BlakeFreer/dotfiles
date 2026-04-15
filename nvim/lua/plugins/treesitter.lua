@@ -27,6 +27,9 @@ return { -- Highlight, edit, and navigate code
             "query",
             "vim",
             "vimdoc",
+            "rust",
+            "python",
+            "toml",
         }
 
         local already_installed = require("nvim-treesitter.config").get_installed()
